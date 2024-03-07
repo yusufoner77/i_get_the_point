@@ -12,6 +12,7 @@ public:
     bool operator!=(Point p1);
     Point operator/(Point p1);
     Point operator*(double c);
+    float operator[](char coordinate);
     void pretty_print();
 
 };

@@ -11,12 +11,14 @@ Point::Point(float x_coordinate, float y_coordinate) {
 
 }
 
+// Prints out a point to the console.
 void Point::pretty_print() {
 
     cout << "(" << x << ", " << y << ")" << endl;
 
 }
 
+// Finds the distance between two points.
 double Point::operator-(Point p1) {
 
     double distance;
@@ -27,6 +29,7 @@ double Point::operator-(Point p1) {
 
 }
 
+// Compares two points and returns true if they are the same.
 bool Point::operator==(Point p1) {
 
     if (x == p1.x && y == p1.y) {
@@ -39,6 +42,7 @@ bool Point::operator==(Point p1) {
 
 }
 
+// Compares two points and returns true if they are different.
 bool Point::operator!=(Point p1) {
 
     if (x == p1.x && y == p1.y) {
@@ -51,6 +55,7 @@ bool Point::operator!=(Point p1) {
 
 }
 
+// Finding the midpoint between two points.
 Point Point::operator/(Point p1) {
 
     double midx = 0.5 * (x + p1.x);
@@ -61,6 +66,8 @@ Point Point::operator/(Point p1) {
 
 }
 
+// Add-on One Credit
+// Multiplying a point by a constant.
 Point Point::operator*(double c) {
 
     double mult_x = c * x;
@@ -68,6 +75,24 @@ Point Point::operator*(double c) {
     double mult_y = c * y;
 
     return Point(mult_x, mult_y);
+
+}
+
+// Add-On Three Credits
+// Returns the X or Y part of a point.
+float Point::operator[](char coordinate) {
+
+    if (coordinate == 'x' || coordinate == 'X') {
+        return x;
+    }
+
+    else if (coordinate == 'y' || coordinate == 'Y') {
+        return y;
+    }
+    
+    else {
+        throw out_of_range("Invalid entry, please specify x or y");
+    }
 
 }
 

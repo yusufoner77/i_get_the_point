@@ -5,5 +5,8 @@ The purpose of this program is to create a class called Point that uses overload
 In order to run the program, you must be able to compile and run C++ programs on your machine.
 
 To run the program:
+```bash
 g++ main.cpp Point.cpp && ./a.out
+```
+
 
